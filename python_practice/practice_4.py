@@ -75,4 +75,63 @@ print(ball[1:4])
 print('The last three items in the list are:')
 print(ball[-3:])
 
-# 元组  元组是不可变的列表，是用圆括号()来标识而不是方括号[]
+# 复制列表  在列表名字加[:]即可复制整个列表
+my_food = ['pizza','cake','rice']
+friend_food = my_food[:]
+print(my_food)
+print(friend_food)        # 打印出来的结果一致
+my_food.append('apple')
+friend_food.append('ice cream')
+print(my_food)            # 打印的列表内容多出apple
+print(friend_food)        # 打印的列表内容多出ice cream
+# my_food和friend_food为独立列表，各无关系
+# 倘若我们只是简单地将my_foods 赋给friend_foods ，就不能得到两个列表
+my_food = ['pizza','cake','rice']
+friend_food = my_food     # 把my_food列表赋给friend_food
+my_food.append('apple')
+friend_food.append('ice cream')
+print(my_food)            # 打印的列表内容多出apple
+print(friend_food)        # 打印的列表内容多出apple
+# my_food和friend_food实则指向同一个对象，所以同时改变
+
+# 4-11 创建水果列表，创建此列表的副本
+fruit = ['apple','orange','banana']
+my_fruit = fruit[:]
+#     在原来的比萨列表中添加一种比萨
+fruit.append('tomato')
+#     在列表my_fruit中添加另一种水果
+my_fruit.append('pineapple')
+#     核实你有两个不同的列表。再使用一个for 循环来打印第一个列表；
+print(fruit)
+print(my_fruit)
+for fruits in fruit:
+    print(fruits)
+#     再使用一个for 循环来打印第二个列表。核实新增的比萨被添加到了正确的列表中。
+for my_fruits in  my_fruit:
+    print(my_fruits)
+
+# 元组(tuple)  元组是不可变的列表，是用圆括号()来标识而不是方括号[]，可以用索引来访问。
+# 遍历元组
+tuple = (500,100,200)
+for tuples in tuple:
+    print(tuples)
+# 修改元组变量
+tuple_1 = (500,200,200)
+print(tuple_1)
+tuple_1 = (400,100,100)
+print(tuple_1)
+
+# 4-13 请想出五种简单的食品，并将其存储在一个元组中。
+#      使用一个for 循环将该餐馆提供的五种食品都打印出来
+food = ('rice','noodle','dumplings','wonton','rice flour')
+for foods in food:
+    print(foods)
+# 替换了它提供的其中两种食品，并使用一个for 循环将新元组的每个元素都打印出来
+food = ('rice','noodle','dumplings','apple','banana')
+for foods in food:
+    print(foods)
+
+# 设置代码格式
+#        进很重要
+
+
