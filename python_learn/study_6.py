@@ -306,24 +306,14 @@ class Dog(Dogs):
         super().heshui() # 使用super调用
 bomei = Dog()
 bomei.heshui()
-#     方法重写：1.直接重写
-#             2.使用super调用重写
+
+#     方法重写：直接重写，在子类中定义和父类相同名称的方法名
 class Dogs():
     def heshui(self):
         print('小狗喝水')
 class Dog(Dogs):
     def heshui(self):
         print('小猫喝水') # 直接重写
-bomei = Dog()
-bomei.heshui()
-# 或者
-class Dogs():
-    def heshui(self):
-        print('小狗喝水')
-class Dog(Dogs):
-    def heshui(self):
-        super().heshui() # 调用父类，重写
-        print('小猫喝水')
 bomei = Dog()
 bomei.heshui()
 
@@ -342,7 +332,7 @@ class People(object):           # 定义父类People
         print('这是people特有的方法')
 class Teather(People):          # 定义Teather子类继承People父类
     def __init__(self,name,age):
-        super().__init__(name)  # 调用父类People中name属性
+        super(Teather,self).__init__(name)  # 调用父类People中name属性
         self.age = age
 class Student(Human,People):    # 定义Student同时类继承Human类和People类
     def __init__(self,sex,name,grade):
