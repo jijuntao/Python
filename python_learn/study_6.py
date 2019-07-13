@@ -114,14 +114,14 @@ class file(metaclass=abc.ABCMeta):
         pass
     def write(self):                 # 定义抽象类方法，子类必须继承写功能
         pass
-
 class Txt(file):                     # 子类继承抽象类，但必须定义read和write方法，否则报错
     def read(self):
         print('文档读取方法')          # 继承read方法
     def write(self):                 # 继承write方法
         print('文档的读取方法')
 qwer = Txt
-print(qwer.all_type)                 # 输出：file
+print(qwer.all_type) # 输出：file
+
 #    封装：我们在看待一个类时，只需要给出所需的属性数据，而如何打印这些数据都是在类中定义好的，这样调用容易，却不知道内部函数的细节
 #         这个过程就是封装。比如
 class Ren(object):
@@ -133,6 +133,7 @@ class Ren(object):
 # 以上过程称作封装
 ren =Ren('hello',18) # 调用
 print(ren)
+
 #    继承：继承就是实现代码复用的方法之一。可以理解成类之间的类型和子类型关系，需要注意的是：继承语法 class 派生类名（基类名）
 #       优点：如果需要定义好几个类，而类与类之间有一些公共的属性和方法，这时就可以把相同的属性和方法作为基类的成员，而特殊的方法及属性则
 #            在本类中定义，这样只需要继承基类这个动作，就可以访问到基类的属性和方法，提高代码的可扩展性
@@ -161,7 +162,6 @@ class Dog(Dogs):                            # 定义子类的子类
         print('柯基喝水')
     def drink(self):
         print('柯基柯基')
-
 keji = Dog('柯基',10,'man','yellow')
 keji.eat()                                   # 调用父类的父类方法，输出：吃饭
 keji.drink()                                 # 调用父类方法，输出：喝水
