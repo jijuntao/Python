@@ -5,6 +5,7 @@
 #     python setup.py install安装
 # 安装火狐、谷歌浏览器
 # 安装火狐浏览器驱动geckodrive-64，浏览器驱动应放置在python安装目录下
+# 谷歌浏览器驱动下载地址:https://chromedriver.storage.googleapis.com/index.html
 # 了解前端知识html，js，css，json，
 # 在python的IDLE编辑器中输入from selenium import webdriver即可使用火狐浏览器驱动
 from selenium import webdrive
