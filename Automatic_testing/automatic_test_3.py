@@ -120,7 +120,7 @@ driver.get("https://www.xdclass.net")
 print(driver.title)
 # 睡眠5秒，加载页面
 sleep(5)
-# 选中输入框，模糊查询：学习，进行点击
+# 使用css定位，用css选择器
 driver.find_element_by_css_selector(".hotcourse > div:nth-child(2) > a:nth-child(1) > div:nth-child(1) > img:nth-child(2)").click()
 
 # 第七种：xpath 绝对路径定位
@@ -133,6 +133,6 @@ driver.get("https://www.xdclass.net")
 print(driver.title)
 # 睡眠5秒，加载页面
 sleep(5)
-# 选中输入框，点击超链接：视频学习
+# xpath定位，复制xpath内容
 driver.find_element_by_xpath("复制的xpath内容").click()
 
