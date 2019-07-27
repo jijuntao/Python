@@ -1,4 +1,4 @@
-# selenium实战之模拟时间处理
+# selenium实战之模拟事件处理
 # 1.自动化测试实战之ActionChains模拟用户行为
 #   简介：讲解使用selenium里面的ActionChains模拟用户行为
 #   需求：
